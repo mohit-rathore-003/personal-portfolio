@@ -3,14 +3,47 @@
 Animated single-page portfolio for a product designer (UI/UX). Built from scratch with
 React, Three.js and Tailwind — no template.
 
+Live: **https://mohitrathore.vercel.app**
+
+## Getting set up on a new machine
+
+```bash
+git clone https://mohit-rathore-003@github.com/mohit-rathore-003/personal-portfolio.git
+cd personal-portfolio
+npm install
+npm run dev      # http://localhost:5173
+```
+
+Two things to redo after every fresh clone — they live in `.git/config`, so they
+are not part of the repo:
+
+```bash
+git config user.name  "mohit-rathore-003"
+git config user.email "ankitrathor2mni@gmail.com"
+```
+
+Without these, commits get authored with the machine's global git identity (the
+Magnet Brains work account) and will not show up on the personal GitHub profile.
+Keep the `mohit-rathore-003@` prefix in the clone URL too, otherwise Windows
+Credential Manager tries the work account and the push fails with a 403.
+
 ## Run it
 
 ```bash
-npm install
 npm run dev      # http://localhost:5173
 npm run build    # production build into dist/
 npm run preview  # serve the built site locally
 ```
+
+## Shipping a change
+
+```bash
+git add -A
+git commit -m "what changed"
+git push
+```
+
+Vercel watches the `master` branch and redeploys on every push, roughly a minute.
 
 ## What is where
 
